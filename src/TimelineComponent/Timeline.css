@@ -1,0 +1,121 @@
+.timeline-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  /* optional: background so you can see the line clearly */
+  padding: 2rem;
+}
+
+.timeline-left-side,
+.timeline-right-side {
+  flex: 1;
+  position: relative;
+}
+
+/* LEFT column: owns the line */
+.timeline-left-side {
+  position: relative;
+  /* height scales with months × month-size */
+  height: calc(var(--months) * var(--month-size));
+  border-right: var(--line-w) solid var(--line-color);
+}
+.timeline-left-side .timeline-item {
+  text-align: right;
+  justify-self: self-end;
+  margin-right: 1rem;
+}
+
+.timeline-right-side .timeline-item {
+  margin-right: 1rem;
+}
+
+/* Circles on the line */
+.timeline-dot {
+  position: absolute;
+  /* align horizontally to the center of the line */
+  right: calc(-1 * var(--line-w) / 2);
+  width: var(--dot-size);
+  height: var(--dot-size);
+  background: var(--dot-color);
+  border-radius: 50%;
+  transform: translate(50%, -50%); /* centers dot on the line */
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-item {
+  background-color: var(--accent-beige);
+  /* border: 1px solid pink; */
+  width: 70%;
+  position: absolute;
+  min-height: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: var(--dark-purple-text);
+  font-size: var(--general-font-size);
+
+  align-content: center;
+}
+
+/* timeline indicator */
+.timeline-left-side .timeline-indicator {
+  justify-self: self-end;
+  margin-right: 1rem;
+}
+.timeline-indicator {
+  position: absolute;
+  background-color: var(--accent-beige);
+  color: var(--dark-purple-text);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  justify-self: self-start;
+  font-size: var(--general-font-size);
+}
+
+/* timeline card hover */
+
+.hover-preview {
+  position: absolute; /* positioned near the card */
+  z-index: 50;
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.18); /* frosted glass base */
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px) saturate(1.2); /* the “frost” */
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+
+  transform-style: preserve-3d;
+  perspective: 800px;
+
+  height:fit-content;
+  width:30rem;
+  color:var(--dark-purple-text);
+}
+
+.hover-preview.flip-in {
+  animation: flipIn 240ms ease-out both;
+}
+
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) rotateY(-18deg) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateY(0deg) scale(1);
+  }
+}
+
+/* content style */
+.hp-title {
+  font-weight: 600;
+  font-size:var(--general-font-size);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.hp-sub {
+  opacity: 0.85;
+  font-size: var(--general-font-size);
+}

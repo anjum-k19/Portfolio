@@ -1,0 +1,58 @@
+.about-me {
+  display: flex;
+  padding: 5rem 0;
+  align-items: center;
+}
+.text {
+  color: var(--dark-purple-text);
+  justify-content: center;
+  text-align: center;
+}
+.image {
+  flex: 1;
+  padding-left: 2rem;
+}
+.about-me-photo {
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+.about-me-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5rem;
+}
+
+/* curved text */
+.circle-text-wrapper {
+  /* background: red; */
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.circle-text-circle-part {
+  background-color: pink;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: var(--accent-beige);
+  margin-top: 1rem;
+  margin-inline: auto;
+}
+
+.curve-text {
+  position: absolute;
+  top: -3rem; 
+  transform: translateX(-50%);
+  height: 10rem;
+}
+
+.curve-text text {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  fill: var(--accent-beige); 
+}

@@ -1,0 +1,32 @@
+.projects-sections{
+    flex:2;
+}
+.project{
+    margin-bottom: 1rem;
+    color:var(--dark-purple-text);
+}
+.project-title{
+    width:100%;
+    display: block;
+    font-size: var(--subheading-font-size);
+}
+.project-description{
+    width:100%;
+    display: block;
+    font-size:var(--general-font-size);
+}
+.project-title-container{
+    display:flex;
+}
+.project-tech-stack{
+    display:flex;
+    gap:0.5rem;
+    margin-bottom:0.5rem;
+}
+.project-skill{
+    text-transform: uppercase;
+    font-size:var(--general-font-size);;
+    /* color:var(--dark-teal-text); */
+    font-weight:600;
+    /* border-bottom:1px solid var(--dark-purple-text); */
+}
