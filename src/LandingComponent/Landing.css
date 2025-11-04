@@ -2,12 +2,13 @@
   display: flex;
   /* padding: 5rem 10rem; */
   justify-content: center;
-  padding:5rem 0;
+  /* padding:5rem 0; */
+  padding-top:5rem;
   /* width:60%;
   margin:auto; */
 }
 .description {
-  color: var(--accent-beige);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   /* flex: 1; */
@@ -19,7 +20,7 @@
   text-align: center;
   font-family: "MagicRetro", serif;
   font-feature-settings: "liga" 1, "salt" 1, "ss01" 1, "swsh" 1;
-  color: var(--accent-beige);
+  color: var(--text-color);
   text-shadow: 0 2px 0 rgba(0,0,0,.08);
   line-height:70px;
 }
@@ -30,7 +31,7 @@
   /* flex: 1; */
 }
 .arch-photo {
-  width: 20rem;
+  width: 30rem;
   height: 30rem;
   overflow: hidden;
   position: relative;
@@ -40,7 +41,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10rem 10rem 0 0;
+  border-radius: 999px;
 }
 
 /* .arch-photo {

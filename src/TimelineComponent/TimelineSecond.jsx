@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
-import "./timelinesecond.css"
+import "./timelinesecond.css";
 
 function fmtRange(start, end) {
   const opts = { year: "numeric", month: "short" };
@@ -43,12 +43,15 @@ export default function TimelineSecond() {
                 className={`card ${
                   currentStepIndex === stepIndex ? "is-active" : ""
                 }`} //if its the current step, add is-active.
-                aria-current={currentStepIndex === stepIndex ? "step" : undefined}
+                aria-current={
+                  currentStepIndex === stepIndex ? "step" : undefined
+                }
               >
-
                 {/* card content start */}
                 <h3 className="card-title">{item.title}</h3>
-                {item.subtitle && <div className="card-sub">{item.subtitle}</div>}
+                {item.subtitle && (
+                  <div className="card-sub">{item.subtitle}</div>
+                )}
                 <div className="card-sub" style={{ opacity: 0.8 }}>
                   {fmtRange(item.start, item.end)}
                 </div>
@@ -57,17 +60,17 @@ export default function TimelineSecond() {
                 {item.content ? (
                   item.content.includes("\n") ? (
                     <ul className="card-points">
-                      {item.content.split("\n").map((line, idx) =>
-                        line.trim() ? <li key={idx}>{line.trim()}</li> : null
-                      )}
+                      {item.content
+                        .split("\n")
+                        .map((line, idx) =>
+                          line.trim() ? <li key={idx}>{line.trim()}</li> : null
+                        )}
                     </ul>
                   ) : (
                     <p className="card-body">{item.content}</p>
                   )
                 ) : null}
                 {/* card content ends */}
-
-                
               </section>
             </Step>
           ))}
@@ -81,32 +84,23 @@ export default function TimelineSecond() {
 const ITEMS = [
   {
     side: "left",
-    title: "KJ Somaiya College of Engineering",
-    subtitle: "Bachelor's in Technology, Computer Engineering",
-    // date: "August 2017",
-    start: new Date("2017-08-01"),
-    end: new Date("2021-04-01"),
+    title: "Amazon Web Services (AWS)",
+    subtitle: "Software Developer Intern",
+    start: new Date("2025-05-01"),
+    end: new Date("2025-08-01"),
+    content:
+      "Developed a React app to flag risky cleanup resources, streamlining region build automation, boosting click through by 40%\
+Built a Smithy JavaScript client with JWT and SigV4 auth, and role chaining, enabling secure retrieval via presigned S3 URLs\
+Deployed on Lambda and S3 for scalable, region-isolated use, lowering review time per 100 resources from 50 to 10 minutes.\
+",
+  },
+  {
+    side: "right",
+    title: "Georgia Institute of Technology",
+    subtitle: "Masters in Computer Science",
+    start: new Date("2024-08-01"),
+    end: new Date("2026-05-01"),
     content: "",
-  },
-  {
-    side: "right",
-    title: "Morgan Stanley",
-    subtitle: "Technology Analyst Intern",
-    start: new Date("2020-05-01"),
-    end: new Date("2020-07-01"),
-    content:
-      "Constructed a Medium Touch Order Tracking dashboard reducing application search time from 20 minutes to 30 seconds",
-  },
-  {
-    side: "right",
-    title: "Morgan Stanley",
-    subtitle: "Technology Analyst Intern",
-    date: "August 2021",
-    start: new Date("2021-02-01"),
-    end: new Date("2021-07-01"),
-    content:
-      "Developed “Deal Blotter” with a CPS Pub/Sub data pipeline, extensible architecture, and Kerberized REST integration.\
-Streamlined Equity and Structured Products (ESPT) sales process, reducing marketing time from ~1 hour per client to 7 mins for multiple clients.",
   },
   {
     side: "left",
@@ -128,22 +122,31 @@ Scrum Master Responsibilities - Orchestrated daily agile tasks, represented my t
   },
   {
     side: "right",
-    title: "Georgia Institute of Technology",
-    subtitle: "Masters in Computer Science",
-    start: new Date("2024-08-01"),
-    end: new Date("2026-05-01"),
-    content: "",
+    title: "Morgan Stanley",
+    subtitle: "Technology Analyst Intern",
+    date: "August 2021",
+    start: new Date("2021-02-01"),
+    end: new Date("2021-07-01"),
+    content:
+      "Developed “Deal Blotter” with a CPS Pub/Sub data pipeline, extensible architecture, and Kerberized REST integration.\
+Streamlined Equity and Structured Products (ESPT) sales process, reducing marketing time from ~1 hour per client to 7 mins for multiple clients.",
+  },
+  {
+    side: "right",
+    title: "Morgan Stanley",
+    subtitle: "Technology Analyst Intern",
+    start: new Date("2020-05-01"),
+    end: new Date("2020-07-01"),
+    content:
+      "Constructed a Medium Touch Order Tracking dashboard reducing application search time from 20 minutes to 30 seconds",
   },
   {
     side: "left",
-    title: "Amazon Web Services (AWS)",
-    subtitle: "Software Developer Intern",
-    start: new Date("2025-05-01"),
-    end: new Date("2025-08-01"),
-    content:
-      "Developed a React app to flag risky cleanup resources, streamlining region build automation, boosting click through by 40%\
-Built a Smithy JavaScript client with JWT and SigV4 auth, and role chaining, enabling secure retrieval via presigned S3 URLs\
-Deployed on Lambda and S3 for scalable, region-isolated use, lowering review time per 100 resources from 50 to 10 minutes.\
-",
+    title: "KJ Somaiya College of Engineering",
+    subtitle: "Bachelor's in Technology, Computer Engineering",
+    // date: "August 2017",
+    start: new Date("2017-08-01"),
+    end: new Date("2021-04-01"),
+    content: "",
   },
 ];

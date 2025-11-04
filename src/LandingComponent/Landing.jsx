@@ -1,4 +1,5 @@
 import "./landing.css";
+import profileImage from '../assets/images/profile.JPG';
 export default function Landing() {
   return (
     <div className="landing">
@@ -19,7 +20,7 @@ export default function Landing() {
       </div>
       <div className="photo">
         <div className="arch-photo">
-          <img src="/profile.JPG" alt="profile" />
+          <img src={profileImage} alt="profile" />
         </div>
       </div>
     </div>

@@ -1,10 +1,12 @@
 import CustomCard from "../assets/CustomCard";
+import CatImg from "../assets/images/stock-cat.jpeg"
+
 import "./aboutme.css";
 export default function AboutMe() {
   return (
     <div className="about-me">
-      <CustomCard>
-        <div className="text">
+      <CustomCard cardClass="custom-glass-card">
+        <div className="about-me-text">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident
           assumenda veritatis earum quas! Incidunt assumenda eos fugit
           accusantium praesentium cum, esse doloremque facere molestiae. Omnis
@@ -28,7 +30,7 @@ export default function AboutMe() {
           </text>
         </svg>
         <div className="about-me-photo circle-text-circle-part">
-          <img src="/stock-cat.jpeg" alt="profile" />
+          <img src={CatImg} alt="profile" />
         </div>
       </div>
     </div>
