@@ -12,10 +12,7 @@ export default function Landing() {
           </i>
         </div>
         <div className="general-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos
-          id rerum vero minus amet possimus nemo facere voluptates fugiat
-          commodi, itaque esse, asperiores expedita. Quae aperiam sunt
-          voluptatem ex laborum.
+          Im a 26 year old software developer :)
         </div>
       </div>
       <div className="photo">

@@ -4,8 +4,7 @@ import CustomButton from "../assets/CustomButton";
 
 export default function Projects() {
   return (
-    <div className="projects-sections">
-      <h2>Projects</h2>
+    <>
       {PROJECT_DATA.map((project) => (
         <div className="project">
           <CustomCard cardClass="custom-glass-card">
@@ -24,7 +23,7 @@ export default function Projects() {
           </CustomCard>
         </div>
       ))}
-    </div>
+    </>
   );
 }
 

@@ -14,7 +14,7 @@
 .timeline-rail {
   position: relative;
   height: 100%;
-  top:30vh;
+  /* top:30vh; */
 }
 .rail-inner {
   position: sticky;
