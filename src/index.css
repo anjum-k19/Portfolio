@@ -63,6 +63,9 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08),
       /* soft depth */ inset 0 0 0.8px rgba(255, 255, 255, 0.5); /* frosted shine */
     border: 1px solid rgba(255, 255, 255, 0.12);
+     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);  
   }
 
   /* headings */

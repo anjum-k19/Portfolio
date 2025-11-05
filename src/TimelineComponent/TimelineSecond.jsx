@@ -75,7 +75,6 @@ export default function TimelineSecond() {
             </Step>
           ))}
         </Scrollama>
-        <div style={{ height: "60vh" }} />
       </main>
     </div>
   );

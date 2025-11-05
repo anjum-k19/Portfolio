@@ -13,13 +13,15 @@
 /* Left rail */
 .timeline-rail {
   position: relative;
-  height: 100%;
-  /* top:30vh; */
+  height: 80%;
+  top:35vh;
+  /* background-color: blue; */
 }
 .rail-inner {
   position: sticky;
-  top: 20vh; /* where it sticks */
+  top: 20vh; /* where it sticks */ 
   padding: 1rem 0;
+  /* background-color: red; */
 }
 
 /* Vertical line behind dots */
@@ -111,7 +113,7 @@
 .card.is-active {
   opacity: 1;
   transform: translateY(0);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .card-title {
