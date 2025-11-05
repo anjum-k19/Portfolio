@@ -4,11 +4,27 @@
     gap:1rem;
     color:var(--text-color);
     fill:var(--text-color);
-    margin:2rem 4rem;
+    height: 300px;
+    justify-content: center;
 }
 .footer-item{
     display: flex;
     align-items: center;
     gap:0.5rem;
     font-size:var(--subheading-font-size);
+    padding-left:5rem;
+}
+.footer-spacer{
+    /* padding-bottom:3rem; */
+}
+.thread-react-cont{
+    height:300px;
+    position: absolute;
+    /* position: relative; */
+    width:100%;
+}
+.threads-container{
+    /* position: absolute !important; */
+    /* height:fit-content !important; */
+    /* top:-2rem; */
 }

@@ -2,8 +2,8 @@ import "./landing.css";
 import profileImage from '../assets/images/profile.JPG';
 export default function Landing() {
   return (
-    <div className="landing">
-      <div className="description">
+    <div className="landing flex flex-col sm:flex-row">
+      <div className="description flex flex-col">
         <div className="name">
           <i>
             Anjum

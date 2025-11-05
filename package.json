@@ -20,6 +20,7 @@
     "ogl": "^1.0.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-masonry-css": "^1.0.16",
     "react-scrollama": "^2.4.2",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.16",

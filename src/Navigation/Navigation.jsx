@@ -3,7 +3,7 @@ import "./navigation.css";
 
 export default function Navigation() {
   return (
-    <div className="navigation-bar">
+    <div className="navigation-bar flex flex-col sm:flex-row">
       <CustomButton label="Education" />
       <CustomButton label="Work" />
       <CustomButton label="Projects" />

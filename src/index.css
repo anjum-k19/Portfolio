@@ -51,17 +51,6 @@
     border-radius: 0.7rem;
   }
 
-  .skills-and-projects {
-    /* display: flex; */
-    width: 90%;
-    margin: auto;
-    margin-top: 3rem;
-  }
-  .skills {
-    width: 10rem;
-    flex: 1;
-  }
-
   /* custom glass card */
   .custom-glass-card {
     background: color-mix(in srgb, var(--accent-beige) 35%, transparent);
@@ -81,7 +70,7 @@
     color: var(--text-color);
     font-family: "MagicRetro", serif;
     font-weight: 300;
-    font-size: 35px;
+    font-size: 50px;
     margin: 0;
   }
 

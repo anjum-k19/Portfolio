@@ -4,7 +4,7 @@ import CatImg from "../assets/images/stock-cat.jpeg"
 import "./aboutme.css";
 export default function AboutMe() {
   return (
-    <div className="about-me">
+    <div className="about-me flex flex-col sm:flex-row">
       <CustomCard cardClass="custom-glass-card">
         <div className="about-me-text">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident

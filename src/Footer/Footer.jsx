@@ -1,9 +1,12 @@
 import "./footer.css";
-
+import Threads from "../components/Threads";
 export default function Footer() {
   return (
     <div id="footer">
-      <h2>Get In Touch!</h2>
+      <div className="thread-react-cont">
+        <Threads amplitude={2.1} distance={0.9} color={[0,0,0]} enableMouseInteraction={true} />
+      </div>
+      <h2 style={{paddingLeft:"5rem"}}>Get In Touch!</h2>
       <div class="footer-item footer-linked-in">
         <span class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -20,6 +23,7 @@ export default function Footer() {
         </span>
         akhandeshi3@gatech.edu
       </div>
+      <div className="footer-spacer"></div>
     </div>
   );
 }

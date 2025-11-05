@@ -1,28 +1,24 @@
 import CustomCard from "../assets/CustomCard";
 import "./projects.css";
 import CustomButton from "../assets/CustomButton";
+import ProjectCard from "../assets/ProjectCard";
+import Masonry from "react-masonry-css";
 
 export default function Projects() {
   return (
     <>
-      {PROJECT_DATA.map((project) => (
-        <div className="project">
-          <CustomCard cardClass="custom-glass-card">
-            {/* photo here on the left  */}
-            {/* title and text  */}
-            <div className="project-image"><img src={`./project/${project.imageLink}`} alt="Hero background" /></div>
-            <div className="project-title-container">
-              <span className="project-title">{project.title}</span>
-              <span className="project-tech-stack">
-                {project.techStack.map((skill) => (
-                  <span className="project-skill">{skill}</span>
-                ))}
-              </span>
-            </div>
-            <div className="project-description">{project.description}</div>
-          </CustomCard>
-        </div>
-      ))}
+    <h2>My Projects!</h2>
+      <Masonry
+        breakpointCols={3}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+      >
+        {PROJECT_DATA.map((project) => (
+          <div className="project">
+            <ProjectCard project={project} />
+          </div>
+        ))}
+      </Masonry>
     </>
   );
 }
@@ -33,20 +29,31 @@ let PROJECT_DATA = [
     description:
       "Combats price gouging by employing an Ethereum blockchain, reducing average supply chain cost by over 20%",
     techStack: ["Ethereum", "Solidity", "Python", "Flutter", "Web3.py"],
-    imageLink:"trace-me.jpg"
+    imageLink: "trace-me.jpg",
+    github: "http://mytest.com",
   },
   {
     title: "Health Aid",
     description:
       "Designed a novel hospital recommendation algorithm, achieving 0.7 second response time",
     techStack: ["Flask", "JavaScript", "Python"],
-    imageLink:"health-aid.jpg"
+    imageLink: "health-aid.jpg",
+    github: "http://mytest.com",
   },
   {
-    title: "PPDFAnalyser",
+    title: "PDFAnalyser",
     description:
       "Parsing unstructured invoice images using OpenCV, providing JSON output of all billing related fields with 93% accuracy",
     techStack: ["Flask", "JavaScript", "Python"],
-    imageLink:"pdf-analyser.jpg"
+    imageLink: "pdf-analyser.jpg",
+    github: "http://mytest.com",
+  },
+  {
+    title: "Sustainable 7 Progress",
+    description:
+      "Parsing unstructured invoice images using OpenCV, providing JSON output of all billing related fields with 93% accuracy",
+    techStack: ["Tableau", "JavaScript", "Python"],
+    imageLink: "pdf-analyser.jpg",
+    github: "http://mytest.com",
   },
 ];

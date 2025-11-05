@@ -1,5 +1,4 @@
 .landing {
-  display: flex;
   /* padding: 5rem 10rem; */
   justify-content: center;
   /* padding:5rem 0; */
@@ -9,8 +8,8 @@
 }
 .description {
   color: var(--text-color);
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   /* flex: 1; */
   justify-content: center;
   max-width: 40%;
